@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../koneksi.php';
+include '../functions.php';
 $iduser = $_GET['user'];
 
 $sql = "SELECT * FROM alamat_user where idUser='$iduser'";

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../koneksi.php';
+include '../functions.php';
 
 
 
@@ -9,8 +9,8 @@ $password = $_POST['password1'];
 $verify = $_POST['password2'];
 if($password == $verify){   
     //kode idUser dinamis
-        $sqlkode = "select max(idUser) from user";
-        $query = mysqli_query($koneksi,$sqlkode);
+        $sqlkode = "select max(id_user) from user";
+        $query = mysqli_query($conn,$sqlkode);
         $data = mysqli_fetch_array($query);
         
         if($data){
@@ -24,8 +24,8 @@ if($password == $verify){
             $kode_auto = "U0001";
         }
     //insert user
-    $sql = "insert into user(id,idUser,username,password) values ('','$kode_auto','$username','$password') ";
-    $query = mysqli_query($koneksi,$sql);
+    $sql = "insert into user(id_user,username,password) values ('','$kode_auto','$username','$password') ";
+    $query = mysqli_query($conn,$sql);
     if($query == TRUE){
         echo "Berhasil daftar! silakan login <a href='../login.php'>Kembali!</a>";
         

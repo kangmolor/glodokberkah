@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../koneksi.php';
+include '../functions.php';
 $user = $_SESSION['username'];
 $sql = "select * from user where username='$user'";
 $query = mysqli_query($koneksi,$sql);

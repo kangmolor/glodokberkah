@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../koneksi.php';
+include '../functions.php';
 $user = $_POST['username'];
 $pass = $_POST['password'];
 

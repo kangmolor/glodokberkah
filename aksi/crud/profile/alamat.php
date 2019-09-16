@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../../../koneksi.php';
+include '../../../functions.php';
 $kode = $_POST['kode'];
 $iduser = $_POST['iduser'];
 $provinsi = $_POST['provinsi'];

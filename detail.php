@@ -1,8 +1,8 @@
 <?php 
 $id = $_GET["no"];
-include 'koneksi.php';
+include 'functions.php';
 session_start();
-if(empty($_SESSION['login_masuk'])){?>
+if(empty($_SESSION['login'])){?>
     <a href="login.php">Login</a> or
     <a href="register.php">Register</a>
     
@@ -10,5 +10,4 @@ if(empty($_SESSION['login_masuk'])){?>
     } else {?>
     <a href="logout.php">Logout!</a>
     <?php } 
-
 ?>

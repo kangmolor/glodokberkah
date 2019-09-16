@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../koneksi.php';
+include '../functions.php';
 if(empty($_SESSION['login_masuk'])){
     header('location:../login.php');
 }

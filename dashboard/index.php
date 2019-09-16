@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../koneksi.php';
+include '../functions.php';
 if(isset($_SESSION['admin'])){
     ?>
 <a href="barang">Data Barang</a>

@@ -1,5 +1,5 @@
 <?php
-include '../../../koneksi.php';
+include '../../../functions.php';
 session_start();
 if(empty($_SESSION['user'])){
     header('location:../../../profile/');
